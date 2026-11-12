@@ -1,0 +1,18 @@
+SMART CLASS FEE MANAGER – Android APK உருவாக்கும் வழிமுறை
+
+முக்கியம்: ZIP கோப்பை .apk என்று rename செய்ய முடியாது. Android build செய்ய வேண்டும்.
+
+முறை 1 – AndroidIDE (Android phone)
+1. AndroidIDE-ஐ trusted source-ல் நிறுவவும்.
+2. இந்த ZIP-ஐ Extract செய்யவும்.
+3. AndroidIDE → Open Project → SmartClassFeeManager_Android_App_Project folder-ஐ தேர்வு செய்யவும்.
+4. Gradle sync முடியும் வரை காத்திருக்கவும்.
+5. Build → Assemble Debug என்பதைத் தேர்வு செய்யவும்.
+6. உருவாகும் APK: app/build/outputs/apk/debug/app-debug.apk
+7. APK-ஐ Phone-ல் Install செய்யவும்.
+
+இந்த project-ல் Android WebView, Tamil UI, மாணவர் பதிவு, கட்டணம், வருகை, QR card, QR scan, reports, backup ஆகியவை உள்ளன.
+Camera QR Scan பயன்பாட்டிற்கு Camera permission Allow செய்ய வேண்டும்.
+
+முறை 2 – GitHub Actions
+.github/workflows/build-apk.yml உள்ளது. Project-ஐ GitHub repository-க்கு upload செய்து Actions-ல் Build APK workflow-ஐ Run workflow செய்யலாம். Build முடிந்ததும் Artifacts-ல் APK கிடைக்கும்.
